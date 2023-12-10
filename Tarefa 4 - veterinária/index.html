@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinária</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Veterinária</h1>
+
+    <label for="precoVacina">Preço da Vacina:</label>
+    <input type="number" id="precoVacina">
+
+    <label for="possuiConvenio">Possui Convênio?</label>
+    <select id="possuiConvenio" onchange="exibirCaixaConvenio()">
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+    </select>
+
+    <div id="caixaConvenio" style="display: none;">
+        <label for="opcoesConvenio">Tipo de Convênio:</label>
+        <select id="opcoesConvenio">
+            <option value="amigoAnimais">Amigo dos Animais</option>
+            <option value="saudeAnimal">Saúde Animal</option>
+        </select>
+    </div>
+
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
