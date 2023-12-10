@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Jogos</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabela de Jogos</h1>
+
+    <label for="clubeInput">Nome do Clube:</label>
+    <input type="text" id="clubeInput">
+    <button onclick="validarPreenchimento()">Adicionar Clube</button>
+    <button onclick="listarClubes()">Listar Clubes</button>
+    <button onclick="montarTabelaJogos()">Montar Tabela de Jogos</button>
+
+    <div id="mensagem"></div>
+    <table id="tabelaJogos"></table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
